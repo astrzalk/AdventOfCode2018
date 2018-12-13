@@ -25,9 +25,8 @@ def find_first_repeat_freq(inputs):
     for x in cycle(inputs): # Cycle creates returns iterator to cycle through an iterable indefinitely
         cum_sum += x
         if cum_sum in freqs_seen:
-            break
+            return cum_sum
         freqs_seen.add(cum_sum)
-    return cum_sum
 
 assert find_first_repeat_freq([+1, -2, +3, +1]) == 2
 assert find_first_repeat_freq([1, -1]) == 0
